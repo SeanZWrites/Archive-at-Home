@@ -16,15 +16,17 @@ This tool requires python3. You'll need to have it installed
 before you can proceed. 
 
   1. Clone this git repo with the command `git clone https://github.com/SeanZWrites/Archive-at-Home`
-  2. (Optional, but recommended) Create a virtual env for your work by running `python -m venv ./venv && . ./venv/bin/activate`
+  2. (Optional, but recommended) Create a virtual env for your work and activate it.
+     - Create it with: `python -m venv ./venv`
+     - Activate with `. ./venv/bin/activate`
   3. Install all dependencies with `pip install -r requirements.txt`
 
 You're now ready to use the tool!
 
 ## Running
 *Note: If you are using a virtual env, you'll need to activate it before running
-these commands. Run `. ./venv/bin/activate` to activate. Windows users should
-run `./venv/Scripts/activate` instead.*
+these commands. Run `. ./venv/bin/activate` to activate (that's dot, then space,
+then `./venv...`). Windows users should run `./venv/Scripts/activate` instead.*
 
   1. Copy your download fic to the `content` folder. 
   2. Run `inv reserve`
