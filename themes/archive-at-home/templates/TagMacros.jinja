@@ -1,0 +1,17 @@
+{% macro GenerateCategorizedTagList(tags) -%}
+<ul class="tags">
+    {% for tag in tags %}
+        {% if tag.name.startswith("Rating") %}<li class="rating-tag">
+        {% elif tag.name.startswith("Fandom") %}<li class="fandom-tag">
+        {% elif tag.name.startswith("Archive Warning") %}<li class="warning-tag">
+        {% elif tag.name.startswith("Category") %}<li class="category-tag">
+        {% elif tag.name.startswith("Relationship") %}<li class="relationship-tag">
+        {% elif tag.name.startswith("Character") %}<li class="character-tag">
+        {% elif tag.name.startswith("Additional Tags") %}<li class="additional-tag">
+        {% else %}<li class="other-tag">
+        {% endif %}
+        <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">{{ tag.name }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{%- endmacro %}
